@@ -53,16 +53,16 @@ void qs(int a[],int l,int h,int n)
 }
 void main()
 {
-	int l=100,i,n;
+	int l=1000,i,n;
 	clock_t start_b,end_b,start_q,end_q;
 	double total_b,total_q;
 	printf("size		bubble			quick\n");
-	while(l<=100000)
+	while(l<=1000000)
 	{
 		int a[l];
 		for(i=0;i<l;i++)
 		{
-			a[i]=rand()%5000000;
+			a[i]=rand()%50000;
 		}
 		start_b=clock();
 		//printf("Starting loops for bubble sort %ld \n",start_b);
@@ -83,6 +83,6 @@ void main()
 		total_q=(double)(end_q-start_q)/CLOCKS_PER_SEC;
 		//printf("Total time taken for quick sort is : %f\n",total_q);
 		printf("%d		%f 		%f\n",l,total_b,total_q);
-		l=l*10;
+		l=l+1000;
 	}
 }
